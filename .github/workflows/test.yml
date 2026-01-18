@@ -31,6 +31,10 @@ jobs:
               working-directory: ./src
               run: npx tsc --noEmit
 
+            - name: Cack all
+              working-directory: ./src
+              run: pnpm check:all
+
     build-docker:
         runs-on: ubuntu-latest
         steps:
