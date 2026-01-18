@@ -24,9 +24,11 @@ jobs:
               uses: pnpm/action-setup@v4
 
             - name: Install dependencies
+              working-directory: ./src
               run: pnpm install
 
             - name: Test with tsc
+              working-directory: ./src
               run: npx tsc --noEmit
 
     build-docker:
